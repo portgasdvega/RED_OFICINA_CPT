@@ -1,0 +1,13 @@
+ROUTER ISP
+
+Router>enable
+Router#configure terminal 
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#interface gig0/0
+Router(config-if)#ip address 200.0.0.2 255.255.255.252
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#interface gig0/1
+Router(config-if)#ip address 8.8.8.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#exit
