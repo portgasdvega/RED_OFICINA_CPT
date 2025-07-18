@@ -1,0 +1,18 @@
+ROUTER LAN
+
+Router>enable
+Router#configure terminal
+Router(config)#interface gig0/0
+Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Router(config-if)#ip nat inside 
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#interface gig0/1
+Router(config-if)#ip address 200.0.0.1 255.255.255.252
+Router(config-if)#ip nat outside
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#access-list 1 permit 192.168.1.0 0.0.0.255
+Router(config)#ip nat inside source list 1 interface gig0/1 overload
+Router(config)#ip route 0.0.0.0 0.0.0.0 200.0.0.2
+Router(config)#exit
