@@ -98,10 +98,10 @@ http://www.servidor.com
 
 ## Estado final
 
-  DHCP funcionando
-  NAT (PAT) activo
-  Acceso a Internet simulado
-  Resolución DNS activa
-  WiFi operativo con acceso completo
+* DHCP funcionando
+* NAT (PAT) activo
+* Acceso a Internet simulado
+* Resolución DNS activa
+* WiFi operativo con acceso completo
 
 ---
